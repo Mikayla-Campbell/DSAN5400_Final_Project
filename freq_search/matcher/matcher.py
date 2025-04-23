@@ -4,7 +4,7 @@ class matcher:
 class realmatcher(matcher):
     def 
 
-dict_list = {
+dei_dict = {
     "ability":[
         r"accessib(le|ility)",
         r"(dis)?ability",
