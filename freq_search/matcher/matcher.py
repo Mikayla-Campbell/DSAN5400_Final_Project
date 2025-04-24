@@ -1,5 +1,7 @@
 class matcher:
-    def __init__(self, ):
+    def __init__(self, tally=None):
+        if tally is None:
+            tally = {"oct":0, "nov":0, "dec":0, "jan":0, "feb":0, "mar":0}
 
 class realmatcher(matcher):
     def 
