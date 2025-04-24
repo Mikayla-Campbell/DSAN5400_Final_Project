@@ -1,1 +1,13 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+
 [project]
+name = "nsf_dei_research"
+version = "2025.0.0"
+requires-python = ">= 3.1"
+authors = [
+    {name = "Brooke Bergin", email = "beb74@georgetown.edu"},
+    {name = "Mikayla Campbell", email = "mrc195@georgetown.edu"}
+]
+description = "An early look into potential effects of Executive Order 14151 on NSF grants and publications."
+keywords = ["NSF", "National Science Foundation", "DEI", "Executive Order 14151", "funding", "federal", "research"]
