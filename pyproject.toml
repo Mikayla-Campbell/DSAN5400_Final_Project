@@ -5,6 +5,9 @@ requires = ["setuptools >= 61.0"]
 name = "nsf_dei_research"
 version = "2025.0.0"
 requires-python = ">= 3.1"
+dependencies = [
+    "
+]    
 authors = [
     {name = "Brooke Bergin", email = "beb74@georgetown.edu"},
     {name = "Mikayla Campbell", email = "mrc195@georgetown.edu"}
