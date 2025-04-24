@@ -38,6 +38,7 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     category = args.category
+    graph = args.graph
 
     #create matcher object
     matcher = Matcher(abstracts_oct, abstracts_nov, abstracts_dec,
@@ -47,7 +48,7 @@ if __name__ == '__main__':
     print("Thank you for using the dei frequency matcher")
     print("Matched on category:", category)
     print("Here are your results:")
-    pprint(matcher.match(category), sort_dicts=False)
+    pprint(matcher.match(category, graph), sort_dicts=False)
 
 
 
