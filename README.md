@@ -1,4 +1,4 @@
-# DSAN5400_Final_Project
+# Executive Order 14151 Effects on Federally Funded Research
 
 Brooke Bergin, Mikayla Campbell
 
