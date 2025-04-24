@@ -1,3 +1,5 @@
+import re
+
 class matcher:
     def __init__(self, tally=None):
         if tally is None:
@@ -8,36 +10,36 @@ class realmatcher(matcher):
 
 dei_dict = {
     "ability":[
-        r"accessib(le|ility)",
-        r"(dis)?ability",
-        "mental health",
-        "people-centered care",
-        "at risk"
+        r"[Aa]ccessib(le|ility)",
+        r"([Dd]is)?ability",
+        r"[Mm]ental health",
+        r"[Pp]eople-centered care",
+        r"[Aa]t risk"
     ],
     "class":[
-        r"oppress(ion|ive)",
-        r"privileges?",
-        "socioeconomic",
-        "status",
-        r"systemic(ally)?"
+        r"[Oo]ppress(ion|ive)",
+        r"[Pp]rivileges?",
+        r"[Ss]ocioeconomic",
+        r"[Ss]tatus",
+        r"[Ss]ystemic(ally)?"
     ],
     "climate":[
-        "clean energy",
-        r"climate (crisis|science)",
-        r"environment(al)?",
-        "pollution"
+        r"[Cc]lean energy",
+        r"[Cc]limate (crisis|science)",
+        r"[Ee]nvironment(al)?",
+        r"[Pp]ollution"
     ],
     "gs":[
-        r"gender ?(ideology|diversity|based|-affirming)",
-        r"assigned (fe)?male at birth",
-        r"sexual(ity)? (preferences)?",
+        r"[Gg]ender ?(ideology|diversity|based|-affirming)",
+        r"[Aa]ssigned (fe)?male at birth",
+        r"[Ss]exual(ity)? (preferences)?",
         r"LGBTQ?",
-        r"trans(gender|sexual)"
+        r"[Tt]rans(gender|sexual)"
     ],
     "re":[
-        r"(multi)?cultural(ly)? ?(competence|differences|heritage|sensitivity|appropriate|responsive)?",
-        r"ethnic(ity)?",
-        r"rac(e|ial(ly)?|ism)",
+        r"([Mm]ulti)?cultural(ly)? ?(competence|differences|heritage|sensitivity|appropriate|responsive)?",
+        r"[Ee]thnic(ity)?",
+        r"[Rr]ac(e|ial(ly)?|ism)",
         "Latinx",
         "Native American",
         "Black",
