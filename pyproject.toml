@@ -24,8 +24,7 @@ dependencies = [
     "scipy",
     "scikit-learn",
     "pandas"
-    matplotlib
-]    
+    "matplotlib"]    
 authors = [
     {name = "Brooke Bergin", email = "beb74@georgetown.edu"},
     {name = "Mikayla Campbell", email = "mrc195@georgetown.edu"}
