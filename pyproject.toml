@@ -23,7 +23,8 @@ dependencies = [
     "spacy",
     "scipy",
     "scikit-learn",
-    "pandas"
+    "pandas",
+    "matplotlib",
 ]    
 authors = [
     {name = "Brooke Bergin", email = "beb74@georgetown.edu"},
