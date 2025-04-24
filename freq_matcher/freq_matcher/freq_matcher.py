@@ -72,7 +72,7 @@ class Matcher:
             f"mar_list={self.mar_list})"
         )
 
-    def match(self, category):
+    def match(self, category, graph_true=False):
         logging.info("Entered match function.")
         logging.info("Matching for category {}".format(category))
         for month, month_abstract_list in self.month_dict.items():
@@ -89,7 +89,10 @@ class Matcher:
         logging.info("Final tally: {}".format(self.tally))
         logging.info("Plotting graph...")
 
-        self.graph_plot(category)
+
+        if graph_true:
+            self.graph_plot(category)
+
         return self.tally
 
     def graph_plot(self, category):
