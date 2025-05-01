@@ -3,6 +3,15 @@ import logging
 import gdown
 
 def download_data(url: str, local_path: str) -> None:
+    """
+    download data from url to local_path
+    if local_path exists, download it to local_path
+    if local_path doesn't exist, download it from url
+
+    :param url: the url to download from
+    :param local_path: the file to upload to
+    :raise: ValueError if download failed or downloaded empty file
+    """
     os.makedirs(os.path.dirname(local_path), exist_ok=True)
 
     if os.path.exists(local_path) and os.path.getsize(local_path) > 0:
