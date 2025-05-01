@@ -4,7 +4,9 @@ import re
 import matplotlib.pyplot as plt
 
 class Matcher:
-
+    """Plots frequency of terms found in tsv files.
+    :param oct_list: count of matches from dei_dict in oct.tsv file
+    :param nov_list: count of matches from dei_dict in nov.tsv file
     def __init__(self, oct_list, nov_list, dec_list, jan_list, feb_list, mar_list):
         logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                             filename='../../logs.txt')
