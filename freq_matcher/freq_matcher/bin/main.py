@@ -5,13 +5,28 @@ from freq_matcher.freq_matcher import Matcher
 from utility.Process_data import download_data
 
 def process_tsv(filepath):
+    """
+    Opens file in filepath which contains abstracts in each row of tsv file.
+    Appends each abstract to a list.
+    :param filepath: the path to the tsv file
+    :return: abstract_list: a list of abstracts
+    """
     abstract_list = []
     with open(filepath, 'r', encoding='utf-8') as f:
         for abstract in f:
             abstract_list.append(abstract.strip())
     return abstract_list
 
-if __name__ == '__main__':
+def main():
+    """
+    Configures logging.
+    Imports files using url download links to google drive.
+    Calls download_data (in utility/Process_data.py) to download data to data folder.
+    Calls process_tsv to convert tsv files to lists.
+    Filters argparse arguments to get user preference on category and graph display.
+    Creates a Matcher object using abstract lists.
+    Calls matcher.match to compute the matches and display the graph (if requested).
+    """
     # configure logging
     for handler in logging.root.handlers[:]:
         logging.root.removeHandler(handler)
@@ -67,5 +82,7 @@ if __name__ == '__main__':
     print("Here are your results:")
     pprint(matcher.match(category, graph), sort_dicts=False)
 
+if __name__ == '__main__':
+    main()
 
 
