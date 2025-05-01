@@ -17,7 +17,6 @@ if __name__ == '__main__':
         logging.root.removeHandler(handler)
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                         filename='../../logs.txt')
-    logging.getLogger().addHandler(logging.StreamHandler())
     logging.info("Entered main.")
 
     # import files
