@@ -1,6 +1,10 @@
 [build-system]
 requires = ["setuptools >= 61.0"]
 
+[tool.ruff]
+line-length = 88
+fix = true
+
 [project]
 name = "freq_matcher"
 version = "0.1.0"
@@ -25,7 +29,7 @@ dependencies = [
     "scikit-learn",
     "pandas",
     "matplotlib",
-]    
+]
 authors = [
     {name = "Brooke Bergin", email = "beb74@georgetown.edu"},
     {name = "Mikayla Campbell", email = "mrc195@georgetown.edu"}
