@@ -3,7 +3,7 @@ requires = ["setuptools >= 61.0"]
 
 [project]
 name = "freq_matcher"
-version = "2025.0.0"
+version = "0.1.0"
 requires-python = ">= 3.1"
 dependencies = [
     "datasets",
