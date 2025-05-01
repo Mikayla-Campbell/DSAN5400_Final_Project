@@ -4,10 +4,17 @@ import re
 import matplotlib.pyplot as plt
 
 class Matcher:
-    """Plots frequency of terms found in tsv files.
-    :param oct_list: count of matches from dei_dict in oct.tsv file
-    :param nov_list: count of matches from dei_dict in nov.tsv file
+    """Plots frequency of terms found in month-tsv files.
+    """
     def __init__(self, oct_list, nov_list, dec_list, jan_list, feb_list, mar_list):
+        """Initializes lists for each tsv file to hold counts.
+        :param oct_list: count of matches from dei_dict in 2410oct.tsv file
+        :param nov_list: count of matches from dei_dict in 2411nov.tsv file
+        :param dec_list: count of matches from dei_dict in 2412dec.tsv file
+        :param jan_list: count of matches from dei_dict in 2501jan.tsv file
+        :param feb_list: count of matches from dei_dict in 2502feb.tsv file
+        :param mar_list: count of matches from dei_dict in 2503mar.tsv file
+        """
         logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                             filename='../../logs.txt')
         logging.info("Instantiating instance of Matcher.")
@@ -54,6 +61,8 @@ class Matcher:
         }
 
     def __str__(self):
+        """Returns a summary string for the number of matched items in each month-tsv file
+        """
         return (
             f"Oct: {len(self.oct_list)} items, "
             f"Nov: {len(self.nov_list)} items, "
@@ -64,6 +73,8 @@ class Matcher:
         )
 
     def __repr__(self):
+        """Returns string representation of the name and contents of each month-list
+        """
         return (
             f"{self.__class__.__name__}("
             f"oct_list={self.oct_list}, "
@@ -75,6 +86,12 @@ class Matcher:
         )
 
     def match(self, category, graph_true=False):
+        """
+        Matches terms from dei_dict by category across all month-tsv files and stores summed tally in 'tally'.
+        :param category: dei_dict key specifying which category of term to match against
+        :param graph_true: generates graph if true
+        :returns dict: dictionary of with month names as keys and count of matches as values
+        """
         logging.info("Entered match function.")
         logging.info("Matching for category {}".format(category))
         for month, month_abstract_list in self.month_dict.items():
@@ -98,6 +115,9 @@ class Matcher:
         return self.tally
 
     def graph_plot(self, category):
+        """Plots total matches by category for each month-tsv file
+        param: category: dei_dict key
+        """
         logging.info("Entered graph_plot function.")
 
         # format title
