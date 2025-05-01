@@ -16,7 +16,7 @@ dependencies = [
     "nltk",
     "numpy",
     "pydantic",
-    "torch"
+    "torch",
     "pyyaml",
     "pip",
     "pytest",
