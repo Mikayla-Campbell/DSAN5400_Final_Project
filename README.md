@@ -6,7 +6,12 @@ This project serves as an inquiry into the effects of the passing of Executive O
 
 We've split the list of 197 terms into 5 categories: "ability", "class", "climate", gender/sexuality ( titled "gs" ), and race/ethnicity ( titled "re" ). We've chosen 4 to 6 terms from the list of 197 terms to be representative of each category.
 
-As a user, you'll be able to search for the frequencies with which each category's representative terms occur in our corpus of abstracts drawn from the NSF's Public Acess Repository. The result will be presented in a graph, showing the progression of usage between the months of October of 2024 and March of 2025. To run the code, run --category followed by the string of the category you'd like to see.
-<br><br>For example: <br>--category class<br>--category gs
+As a user, you'll be able to search for the frequencies with which each category's representative terms occur in our corpus of abstracts drawn from the NSF's Public Acess Repository. The result will be presented in a graph, showing the progression of usage between the months of October of 2024 and March of 2025. To run the code, run --category or -c followed by the string of the category you'd like to see.
+<br><br>For example: <br>--category "class"<br>--category "gs"
+<br><br>Include --graph or -g to prompt the bar graph to display. If excluded, the results will be output in the terminal, nicely formatted.
+<br><br>Happy searching!
 
-Happy searching!
+
+Below is a detailed look at the program architecture:
+![image](https://github.com/user-attachments/assets/d76e9931-8d26-475f-834f-1caae3fe0b1e)
+
